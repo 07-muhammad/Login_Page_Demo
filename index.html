@@ -5,23 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="login-container">
-        <h2 class="fade-in">Welcome Back</h2>
-        <form>
-            <div class="input-group slide-in">
-                <input type="text" required>
-                <label>Username</label>
+    <div class="page-wrapper">
+        <div class="auth-frame" id="authFrame">
+            <div class="panel-slider">
+                <div class="auth-panel login-panel">
+                    <div class="panel-head">
+                        <h2>Hello Again!</h2>
+                        <p>Sign in to continue with your account</p>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <button class="btn pulse">Login</button>
+                    </form>
+                    <div class="social-options">
+                        <p>Or connect with:</p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google"><i class="fab fa-google"></i></button>
+                            <button type="button" class="social-btn linkedin"><i class="fab fa-linkedin"></i></button>
+                            <button type="button" class="social-btn email"><i class="fas fa-envelope"></i></button>
+                            <button type="button" class="social-btn github"><i class="fab fa-github"></i></button>
+                        </div>
+                    </div>
+                    <div class="social-connect-panel">
+                        <div class="connect-head">
+                            <div class="connect-icon"><i class="fab fa-google"></i></div>
+                            <div>
+                                <h3>Connect with Google</h3>
+                                <p>Use your social account to sign in quickly.</p>
+                            </div>
+                        </div>
+                        <button type="button" class="connect-action">Connect Account</button>
+                        <button type="button" class="close-connect">Not now</button>
+                    </div>
+                    <div class="panel-footer">
+                        <span>New here?</span>
+                        <button type="button" class="switch-btn" data-target="signup">Sign Up</button>
+                    </div>
+                </div>
+                <div class="auth-panel signup-panel">
+                    <div class="panel-head">
+                        <h2>Create Account</h2>
+                        <p>Join us in a few easy steps</p>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" required>
+                            <label>Full Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <button class="btn pulse">Sign Up</button>
+                    </form>
+                    <div class="social-options">
+                        <p>Or sign up with:</p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google"><i class="fab fa-google"></i></button>
+                            <button type="button" class="social-btn linkedin"><i class="fab fa-linkedin"></i></button>
+                            <button type="button" class="social-btn email"><i class="fas fa-envelope"></i></button>
+                            <button type="button" class="social-btn github"><i class="fab fa-github"></i></button>
+                        </div>
+                    </div>
+                    <div class="social-connect-panel">
+                        <div class="connect-head">
+                            <div class="connect-icon"><i class="fab fa-google"></i></div>
+                            <div>
+                                <h3>Connect with Google</h3>
+                                <p>Use your social account to sign in quickly.</p>
+                            </div>
+                        </div>
+                        <button type="button" class="connect-action">Connect Account</button>
+                        <button type="button" class="close-connect">Not now</button>
+                    </div>
+                    <div class="panel-footer">
+                        <span>Already have an account?</span>
+                        <button type="button" class="switch-btn" data-target="login">Login</button>
+                    </div>
+                </div>
             </div>
-            <div class="input-group slide-in">
-                <input type="password" required>
-                <label>Password</label>
-            </div>
-            <button class="btn pulse">Login</button>
-        </form>
+        </div>
     </div>
 
     <script src="script.js"></script>
