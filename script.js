@@ -38,10 +38,17 @@ socialButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (!connectPanel) return;
 
+        const activeProvider = connectPanel.dataset.provider;
         const icon = connectPanel.querySelector('.connect-icon i');
         const title = connectPanel.querySelector('h3');
         const subtitle = connectPanel.querySelector('.connect-head p');
 
+        if (connectPanel.classList.contains('active') && activeProvider === provider) {
+            connectPanel.classList.remove('active');
+            return;
+        }
+
+        connectPanel.dataset.provider = provider;
         icon.className = providerIcons[provider] || 'fas fa-user';
         title.textContent = `Connect with ${providerLabel}`;
         subtitle.textContent = provider === 'email'
